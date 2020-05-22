@@ -25,4 +25,34 @@ python 3.8 - recommended install via pyenv ref bit.ly/nnpipenv
         some value
         '
         #NOTE: the .env file is auto-loaded 
+
+    # run without pipenv run i.e. directly call python binary 
+    ./.venv/bin/python src/demo_env.py
+    # python binary    py file to run
+        result='
+        None
+        '
+    
+    # run with env var as prefix to the command 
+    SOME_VAR='vvv'        ./.venv/bin/python src/demo_env.py
+    # env var as prefix   python binary    py file to run
+        result='
+        vvv
+        '
+    
+    # with env var(s) in .env 
+    eval "`cat ./.env`"      ./.venv/bin/python src/demo_env.py
+    # load .env as env var   python binary      py file to run
+        result='
+        some value
+        '
 ```
+
+So here is the conclusion
+
+00 from pyton code, `os.environ` is where to get them e.g. os.environ.get('SOME_VAR') or os.environ['SOME_VAR']
+
+01a env var can be defined as command prefix
+01b env var can be defined in .env and loaded as command prefix manually
+
+01b env var can be defined in .env and auto-loaded with pipenv
