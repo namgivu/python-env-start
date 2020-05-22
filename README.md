@@ -55,4 +55,6 @@ So here is the conclusion
 01a env var can be defined as command prefix
 01b env var can be defined in .env and loaded as command prefix manually
 
-01b env var can be defined in .env and auto-loaded with pipenv
+01b env var can be defined in .env and auto-loaded with `pipenv run`
+
+02 how about not using `pipenv run` ? we can autoload via [python-dotenv package](https://pypi.org/project/python-dotenv/)
