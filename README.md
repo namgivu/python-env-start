@@ -15,3 +15,8 @@ python 3.8 - recommended install via pyenv ref bit.ly/nnpipenv
 : you@gitclonedfolder
     pipenv sync ; pipenv --venv ; should_see='/path/to/:gitclonedfolder/.venv/'
 ```
+
+# demo env
+```bash
+pipenv run python src/demo_env.py
+```
