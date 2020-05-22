@@ -58,3 +58,23 @@ So here is the conclusion
 01b env var can be defined in .env and auto-loaded with `pipenv run`
 
 02 how about not using `pipenv run` ? we can autoload via [python-dotenv package](https://pypi.org/project/python-dotenv/)
+
+
+# demo Siri-context .env usage
+
+## use UAT .env 
+```bash
+: you@gitclonedfolder
+    cp ./docker/config_vault/UAT/app_config/.env   ./.env
+    #  UAT .env file                               app .env file
+
+    pipenv run python ./src/product/PV_Independence/PremiumHandler.py   
+        should_see='
+        Loading .env environment variables…
+        
+        Python code sending request to endpoint at :PV_INDEPENDENCE_PREMCALC_URL here
+        $ http POST PV_INDEPENDENCE_PREMCALC_URL
+        $ http POST http://68.183.235.218:20326/premium_calculator
+        '
+```
+
