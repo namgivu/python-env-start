@@ -9,3 +9,9 @@ python 3.8 - recommended install via pyenv ref bit.ly/nnpipenv
     python -m pip install --upgrade pip ; python -m pip install pipenv ; pipenv --version  ; should_see='pipenv, version 2018.11.26'
     # update most-recent pip              isntall pipenv                 view version      
 ```
+
+# install package
+```bash
+: you@gitclonedfolder
+    pipenv sync ; pipenv --venv ; should_see='/path/to/:gitclonedfolder/.venv/'
+```
