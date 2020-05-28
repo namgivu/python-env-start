@@ -1,3 +1,6 @@
+# intro
+The target is to have ./src/demo_env.py run and print out the env var we have in .env file
+
 # prerequisite
 python 3.8 - recommended install via pyenv ref bit.ly/nnpipenv
 
